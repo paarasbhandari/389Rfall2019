@@ -1,0 +1,46 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function myFunc(){
+		var flag = false;
+		var a = document.getElementById("myButton");
+		a.addEventListener("click",
+			function(){
+				document.querySelector("body").style.background = flag?"red":"green";
+				document.querySelector("h2").innerHTML = flag?"Hello World!":"Bye World!";
+				flag = !flag;
+				
+
+			}
+
+			);
+		}
+	</script>
+	<style type="text/css">
+
+		#myButton{
+			color: red;
+		}
+
+
+		div{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+	</style>
+</head>
+<body>
+
+	<div>
+		<h2> Hello World! </h2>
+		<button id = "myButton"> Change Color! </button>
+		<p> ok </p>
+	</div>	
+	<script>
+		window.onload = myFunc();
+	</script>
+</body>
+</html>

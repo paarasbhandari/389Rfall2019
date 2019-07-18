@@ -1,0 +1,35 @@
+.items{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.title{
+	text-align: center;
+	color: green;
+}
+
+.item{
+	position: relative;
+	border: 1px solid black;
+	padding: 5px;
+	margin: 7px;
+	border-radius: 3%;
+}
+
+.head{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.addButton{
+	border: 1px solid black;
+	position: relative;
+	left: 50%;
+}
+
+
+
