@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage[tight]{subfigure}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=red,
+}
+
+% Remember to fill these out.
+\newcommand{\StudentName}{Enter Name Here}
+\newcommand{\StudentUID}{Enter UID Here}
+
+
+\newcommand{\myhw}[5]{
+  \pagestyle{myheadings}
+  \thispagestyle{plain}
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to \textwidth { {\bf {\small CMSC 498L}:~Introduction to Deep Learning \hfill {\small #2}} }
+       \vspace{6mm}
+       \hbox to \textwidth { {\Large \hfill #1  \hfill} }
+       \vspace{4mm}
+      \hbox to \textwidth { {\it Name: {\rm #3} \hfill UID: {\rm #4} } }
+      \vspace{2mm}}
+      
+    }
+   \end{center}
+   
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{Name: \StudentName}
+    \rhead{UID: \StudentUID}
+    \cfoot{--- \thepage~---}
+    \vspace*{4mm}
+}
+
+\parindent 0in
+%\parskip 1.5ex
+% \renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\myhw{Assignment 1}{Released: Feb-04. Due Feb-11.}{\StudentName}{\StudentUID}
+
+\paragraph{Instructions:}
+\begin{itemize}
+    \item Submit the assignment on ELMS.
+    \item Assignments have to be formatted in \LaTeX. You can use \href{https://www.overleaf.com/}{overleaf} for writing your assignments.
+    \item Submit only the compiled PDF version of the assignment.
+    \item Refer to \href{http://www.cs.umd.edu/class/spring2020/cmsc498L/#policy}{policies} (collaboration, late days, etc.) on the course website.
+\end{itemize}
+
+\section{Probability}
+	
+\begin{enumerate}
+  \item \textbf{Density function}. Let $p$ be a Gaussian distribution with zero mean and variance of 0.1. Compute the density of $p$ at 0.
+  
+  \textbf{Sol:}
+  
+  \newpage
+  
+  \item \textbf{Conditional probability}. A student is taking a one-hour-time-limit makeup examination. Suppose the probability that the student will finish the exam in less than x hours is $x/2$, $\forall \text{x}\in[0,1]$. 
+  %for all $0 \leq x \leq 1$. 
+  Given that the student is still working after 0.75 hour, what is the conditional probability that the full hour will be used?
+  
+  \textbf{Sol:}
+  
+  \newpage
+  
+  \item \textbf{Bayes rule}. Consider the probability distribution of you getting sick given the weather in the table below.
+  
+  \vspace{1mm}
+  \begin{tabular}{@{}ccccc@{}}
+  \toprule
+  \multirow{2}{*}{Sick?} & \multicolumn{4}{@{}c@{}}{Weather}  \\
+  \cmidrule{2-5}
+      & sunny & rainy & cloudy & snow \\
+  \midrule
+  yes  & 0.144 & 0.02 & 0.016 & 0.02\\
+  no & 0.576 & 0.08 & 0.064 & 0.08 \\
+  \bottomrule
+  \end{tabular}
+  \vspace{1mm}
+  
+  Compute P$\left(\, \text{sick}=\text{yes}\mid\text{Weather}=\text{rainy} \,\right)$.
+  
+  \textbf{Sol:}
+  
+  \newpage
+\end{enumerate}
+
+\section{Calculus and Linear Algebra}
+
+ For each of the following questions, we expect to see all the steps for reaching the solution.
+	
+\begin{enumerate}
+\item Compute the derivative of the function $f(z)$ with respect to z $\left(\text{i.e., }\frac{df}{dz}\right)$, where $$f(z) = \frac{1}{1+e^{-z}}$$
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Compute the derivative of the function $f(w)$ with respect to $w_i$, where $w, x \in \mathbb{R}^\text{D}$ and $$f(w) = \frac{1}{1+e^{-w^Tx}}$$
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Compute the derivative of the loss function $J(w)$ with respect to $w$, where 
+$$ J(w) = \frac{1}{2}\sum_{i=1}^{m} \left|w^{T}x^{(i)} - y^{(i)}\right| $$
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Compute the derivative of the loss function $J(w)$ with respect to $w$, where 
+$$ J(w) = \frac{1}{2}\left[ \sum_{i=1}^{m} \left(w^{T}x^{(i)} - y^{(i)}\right)^2 \right] + \lambda \|w\|^2_2 $$ 
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Compute the derivative of the loss function $J(w)$ with respect to $w$, where 
+$$ J(w) = \sum_{i=1}^{m} \left[y^{(i)} \log \left(\frac{1}{1 + e^{-w^{T}x^{(i)}}}\right) + \left(1 - y^{(i)}\right) \log \left(1- \frac{1}{1 + e^{-w^{T}x^{(i)}}}\right)\right] $$
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Compute $\nabla_wf$, where $f(w) = \tanh \left[w^Tx\right]$.
+
+\textbf{Sol:}
+  
+  \newpage
+	   
+\item Find the solution to the system of linear equations given by Ax=b, where 
+$$A = \left(\begin{array}{rrr} 2 & 1 & -1\\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{array}\right) \quad \text{and} \quad b = \left(\begin{array}{r} 8 \\ -11 \\ -3 \end{array}\right).$$
+
+\textbf{Sol:}
+  
+  \newpage
+
+\item Find the eigenvalues and associated eigenvectors of the matrix:
+
+$$A = \left[\begin{array}{rrr} 7 & 0 & -3\\ -9 & -2 & 3 \\ 18 & 0 & -8 \end{array}\right] \quad $$
+
+\textbf{Sol:}
+  
+  \newpage
+
+
+\end{enumerate}
+
+
+\section{Activation functions}
+For each of the following activation functions, write their equations and their derivatives. Plot the functions and derivatives, with $x\in \left[-5, 5\right]$ and $y\in\left[-10,10\right]$ plot limits. (No need to submit the code for plots.)
+
+\begin{enumerate}
+    \item Relu
+    
+    \textbf{Sol:}
+  
+  \newpage
+  
+    \item Tanh
+    
+    \textbf{Sol:}
+  
+  \newpage
+  
+    \item Softmax
+    
+    \textbf{Sol:}
+  
+  \newpage
+  
+    \item Sigmoid
+    
+    \textbf{Sol:}
+  
+  \newpage
+  
+    \item Leaky ReLU
+    
+    \textbf{Sol:}
+  
+  \newpage
+    \item ELU (plot with $\alpha=0.3$)
+    
+    \textbf{Sol:}
+  
+  \newpage
+    \item Sinc
+    
+    \textbf{Sol:}
+\end{enumerate}
+
+\vspace{20pt}
+
+
+
+\end{document}
